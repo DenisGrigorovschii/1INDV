@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <label for="fileInput" class="file-label">Выберите файл transactions.json:</label>
+        <input type="file" id="fileInput" class="file-input">
+        
+        <table id="transactionTable" class="transaction-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Дата</th>
+                    <th>Сумма</th>
+                    <th>Тип</th>
+                    <th>Описание</th>
+                    <th>Магазин</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Транзакции будут добавлены здесь -->
+            </tbody>
+        </table>
+        
+        <div id="analysis" class="analysis">
+            <button id="uniqueTransactionTypesBtn" class="btn">Уникальные типы транзакций</button>
+            <button id="totalAmountBtn" class="btn">Общая сумма транзакций</button>
+            <button id="totalAmountByDateBtn" class="btn">Сумма по дате</button>
+            <button id="transactionByTypeBtn" class="btn">Транзакции по типу</button>
+            <button id="transactionsInDateRangeBtn" class="btn">Транзакции по диапазону дат</button>
+            <button id="transactionsByMerchantBtn" class="btn">Транзакции по магазину</button>
+            <button id="averageTransactionAmountBtn" class="btn">Средняя сумма транзакций</button>
+            <button id="transactionsByAmountRangeBtn" class="btn">Транзакции по диапазону сумм</button>
+            <button id="totalDebitAmountBtn" class="btn">Общая сумма дебетов</button>
+            <button id="mostTransactionsMonthBtn" class="btn">Месяц с наибольшим числом транзакций</button>
+            <button id="mostDebitTransactionMonthBtn" class="btn">Месяц с наибольшим числом дебетов</button>
+            <button id="mostTransactionTypesBtn" class="btn">Тип транзакций с наибольшим числом</button>
+            <button id="transactionsBeforeDateBtn" class="btn">Транзакции до даты</button>
+            <button id="findTransactionByIdBtn" class="btn">Найти транзакцию по ID</button>
+            <button id="mapTransactionDescriptionsBtn" class="btn">Описание транзакций</button>
+        </div>
+        
+        <div id="result" class="result"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
